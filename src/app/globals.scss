@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cLGrey: #93928f;
+  --cGrey: #656565;
+  --cPurple: #8f67db;
+  --cPink: #e6acfd;
+  --cBlue: #90a1de;
+}
+
+body {
+  background: #fffaff;
+}
+.ni {
+  user-select: none;
+  pointer-events: none;
+}
+main {
+}
+
+.btn {
+  background: none;
+  outline: none;
+  border: none;
+  transition: all 250ms ease;
+  text-decoration: none;
+  color: var(--cGrey);
+  &:hover {
+    scale: 1.05;
+  }
+
+  &:active {
+    scale: 0.98;
+  }
+}

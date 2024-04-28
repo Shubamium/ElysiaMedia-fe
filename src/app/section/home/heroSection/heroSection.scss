@@ -1,0 +1,103 @@
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .hero-logo {
+    background: url("/decors/hero-decors.png"), transparent;
+    background-size: contain;
+    width: 70%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    margin: 1em;
+    img {
+      transition: all 500ms ease;
+      max-width: 50%;
+    }
+    &:hover {
+      img {
+        scale: 1.05;
+      }
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+    color: var(--cPink);
+    font-weight: normal;
+    text-align: center;
+    span {
+      font-size: 3.2rem;
+      color: var(--cPurple);
+      font-weight: bolder;
+    }
+  }
+  .description {
+    max-width: min(760px, 80%);
+    text-align: center;
+    color: var(--cGrey);
+    font-family: var(--fontAlt);
+  }
+
+  .action {
+    margin: 1em 0;
+    // display: grid;
+    display: flex;
+    // flex-direction: column;
+    gap: 1em;
+
+    .btn-hero {
+      font-size: 1.5rem;
+      padding: 0.25em 1em;
+    }
+    .btn-hero.outline {
+      outline: 2px solid var(--cLGrey);
+      outline-offset: -2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+
+      position: relative;
+
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--cGrey);
+        z-index: -2;
+        transition: all 500ms ease;
+        transition-delay: 350ms;
+      }
+      transition: all 500ms ease;
+      transition-delay: 550ms;
+      &:hover {
+        &::before {
+          transition-delay: 0ms;
+          left: 0%;
+        }
+        color: white;
+        transition-delay: 0ms;
+      }
+    }
+    .btn-hero.styled {
+      padding: 0;
+      span {
+        padding: 0.25em 1em;
+        background: var(--cPurple);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        width: 100%;
+      }
+    }
+  }
+}
