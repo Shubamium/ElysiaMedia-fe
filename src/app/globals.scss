@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #fffaff;
+  background: url("/backgrounds/dash-pattern.png"), #fffaff;
 }
 .ni {
   user-select: none;
@@ -28,6 +28,7 @@ main {
   outline: none;
   border: none;
   display: block;
+  cursor: pointer;
   transition: all 250ms ease;
   text-decoration: none;
   color: var(--cGrey);
