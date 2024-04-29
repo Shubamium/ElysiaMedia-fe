@@ -34,7 +34,7 @@
       h2 {
         // font-weight: normal;
         color: var(--cPurple);
-        font-size: 3rem;
+        font-size: 4rem;
       }
       hr {
         width: 80%;
@@ -59,9 +59,10 @@
 
       label {
         margin: 0.2em;
-        font-size: 1.1rem;
-        color: var(--cPink);
-        // font-family: var(--fontSecondary);
+        font-size: 1.2rem;
+        color: #dd83bc;
+        font-family: var(--fontPrimary);
+        letter-spacing: -2px;
         font-weight: bolder;
         font-size: 1.5rem;
         margin-top: 1.5em;

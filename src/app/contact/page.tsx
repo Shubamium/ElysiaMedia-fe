@@ -25,6 +25,7 @@ export default function ContactPage({}: Props) {
               autoComplete="name"
               placeholder="Enter your name here . . ."
               id="name"
+              required
             />
           </div>
           <div className="fields">
@@ -41,6 +42,7 @@ export default function ContactPage({}: Props) {
             <textarea
               name="message"
               id="message"
+              required
               placeholder="Write your messages here . . ."
             ></textarea>
           </div>
