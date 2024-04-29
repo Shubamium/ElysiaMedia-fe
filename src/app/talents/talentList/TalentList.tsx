@@ -140,10 +140,10 @@ export default function TalentList({ genList, talentList }: Props) {
             <h2>our talents</h2>
             <hr />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               quidem vitae dignissimos quaerat! Neque eius laboriosam similique
               dolorem corrupti reiciendis qui deserunt porro, velit, at fuga
-              adipisci magnam maiores itaque.
+              adipisci magnam maiores itaque. */}
             </p>
           </div>
         </article>

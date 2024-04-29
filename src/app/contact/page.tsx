@@ -10,11 +10,11 @@ export default function ContactPage({}: Props) {
         <div className="form-header">
           <h2>contact us</h2>
           <hr />
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
             quibusdam sint, dolore recusandae sit quam eligendi reiciendis
             sapiente error excepturi nisi culpa corporis voluptate possimus.
-          </p>
+          </p> */}
         </div>
 
         <div className="form-fields">
