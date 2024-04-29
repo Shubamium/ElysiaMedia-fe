@@ -38,6 +38,7 @@ export default function RootLayout({
           } as CSSProperties
         }
       >
+        <img src="/decors/decor-floor.png" alt="" className="decor-floor" />
         <Header />
         {children}
       </body>
