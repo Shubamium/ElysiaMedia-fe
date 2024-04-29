@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-export default async function Talent({ params }: Props) {
+export default async function TalentPage({ params }: Props) {
   const gen = params.id[0];
   const talentId = params.id[1];
 
