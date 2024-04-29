@@ -26,7 +26,7 @@ export default function AboutSection({}: Props) {
         </div>
       </div>
       <div className="banner-part">
-        <img src="" alt="" />
+        <img src="/graphics/logo_light.png" alt="" />
       </div>
       <article className="info-part">
         <p>
