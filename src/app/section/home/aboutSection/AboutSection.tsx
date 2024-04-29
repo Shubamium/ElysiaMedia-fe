@@ -30,10 +30,14 @@ export default function AboutSection({}: Props) {
       </div>
       <article className="info-part">
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cumque
-          vero ducimus nostrum itaque nobis quis culpa nesciunt corrupti dolores
-          quisquam eveniet aperiam voluptatem ex quas, natus porro et laudantium
-          ipsa veniam a dolorem.
+          Elysia Media was started by VTuber enthusiasts with a passion for
+          content creation! Our mission is to bring together fans from across
+          the globe!
+        </p>
+        <p>
+          Our talents are our top priority, so we believe that they should have
+          the ability to let their creativity run free! We provide talents with
+          tech support, social media management, assets for debut, etc.!
         </p>
         <div className="action">
           <Link href={"/contact"} className="btn btn-about">

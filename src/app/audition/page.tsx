@@ -10,16 +10,11 @@ export default function AuditionPage({}: Props) {
         <div className="confine">
           <article>
             <h2>
-              Some text here
+              Join our
               <span>auditions!</span>
             </h2>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              magni officia cumque repudiandae expedita adipisci tempora nam
-              impedit, ducimus numquam laborum. Quas ratione, quia quos
-              similique repudiandae officia quasi sint.
-            </p>
+            <p>Join Elysia in making our mark on VTubing!</p>
 
             <div className="action">
               <a href="#" target="_blank" className="btn btn-apply">
