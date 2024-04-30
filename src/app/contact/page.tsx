@@ -1,12 +1,29 @@
+"use client";
 import React from "react";
 import "./contact.scss";
 import { HiMiniPaperAirplane } from "react-icons/hi2";
+import { useRouter } from "next/navigation";
 type Props = {};
 
 export default function ContactPage({}: Props) {
+  const router = useRouter();
   return (
     <main id="contact-page">
-      <form action="/api/send" className="contact-form">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target as HTMLFormElement);
+          const name = formData.get("name");
+          const email = formData.get("email");
+          const message = formData.get("message");
+          // setIsLoading(true);
+          router.replace(
+            `/api/send?name=${name}&email=${email}&message=${message}`
+          );
+        }}
+        method="POST"
+        className="contact-form"
+      >
         <div className="form-header">
           <h2>contact us</h2>
           <hr />
