@@ -1,8 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { FaTwitter } from "react-icons/fa";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaArrowLeftLong,
+  FaArrowRightLong,
+  FaLetterboxd,
+} from "react-icons/fa6";
 import "./aboutSection.scss";
+import { CiMail } from "react-icons/ci";
 type Props = {};
 
 export default function AboutSection({}: Props) {
@@ -14,14 +19,22 @@ export default function AboutSection({}: Props) {
           <span>ELYSIA MEDIA</span>
         </h2>
         <div className="contacts">
-          <a href="#" target="_blank" className=" btn contact">
+          <a
+            href="https://twitter.com/@Elysia_Media"
+            target="_blank"
+            className=" btn contact"
+          >
             <FaTwitter />
           </a>
           <a href="#" target="_blank" className=" btn contact">
-            <FaTwitter />
+            <FaYoutube />
           </a>
-          <a href="#" target="_blank" className=" btn contact">
-            <FaTwitter />
+          <a
+            href="mailto:OfficialElysiaMedia@gmail.com"
+            target="_blank"
+            className=" btn contact"
+          >
+            <CiMail />
           </a>
         </div>
       </div>
