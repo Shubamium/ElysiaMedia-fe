@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function Submit({ searchParams }: Props) {
-  const success = searchParams.result === "success";
+  const success = searchParams.result === "true";
   return (
     <main id="submit-page">
       <section id="submit-message">

@@ -5,7 +5,7 @@ import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEYS);
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   let success = false;
   try {
     const param = request.nextUrl.searchParams;
@@ -36,6 +36,8 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     return Response.json({ error });
   }
-
-  redirect(`/contact/submit?result=${success}`);
+  return Response.json({
+    success: success,
+  });
+  // redirect(`/contact/submit?result=${success}`);
 }

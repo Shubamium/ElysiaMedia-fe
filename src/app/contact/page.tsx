@@ -17,9 +17,24 @@ export default function ContactPage({}: Props) {
           const email = formData.get("email");
           const message = formData.get("message");
           // setIsLoading(true);
-          router.replace(
-            `/api/send?name=${name}&email=${email}&message=${message}`
-          );
+          // router.replace(
+          //   `/api/send?name=${name}&email=${email}&message=${message}`
+          // );
+          fetch("/api/send", {
+            method: "POST",
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              message: message,
+            }),
+          })
+            .then((data) => {
+              return data.json();
+            })
+            .then((result) => {
+              router.push(`/contact/submit?success=${result.success}`);
+              console.log(result);
+            });
         }}
         method="POST"
         className="contact-form"
