@@ -6,7 +6,7 @@ type Props = {};
 export default function ContactPage({}: Props) {
   return (
     <main id="contact-page">
-      <form action="#" className="contact-form">
+      <form action="/api/send" className="contact-form">
         <div className="form-header">
           <h2>contact us</h2>
           <hr />
@@ -25,6 +25,7 @@ export default function ContactPage({}: Props) {
               autoComplete="name"
               placeholder="Enter your name here . . ."
               id="name"
+              name="name"
               required
             />
           </div>
@@ -34,6 +35,7 @@ export default function ContactPage({}: Props) {
               type="email"
               placeholder="Enter your email here . . ."
               autoComplete="name"
+              name="email"
               id="email"
             />
           </div>
