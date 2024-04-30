@@ -15,8 +15,11 @@ export async function GET(request: NextRequest) {
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: ["OfficialElysiaMedia@gmail.com"],
-      subject: "New Form Submission from Elysia Media Website",
+      to: [
+        // "businessinquiries@moxiesklubhouse.com",
+        "OfficialElysiaMedia@gmail.com",
+      ],
+      subject: "New Email Submission from Elysia Media Website",
       react: Submission({
         name: name ?? "(Not Filled)",
         email: email ?? "(Not Filled)",
@@ -34,6 +37,5 @@ export async function GET(request: NextRequest) {
     return Response.json({ error });
   }
 
-  // Show result here!!
-  redirect(`/contact/submit?result=success`);
+  redirect(`/contact/submit?result=${success}`);
 }
