@@ -6,12 +6,12 @@ import { FaHome } from "react-icons/fa";
 import { BiErrorCircle } from "react-icons/bi";
 type Props = {
   searchParams: {
-    result: string;
+    success: string;
   };
 };
 
 export default function Submit({ searchParams }: Props) {
-  const success = searchParams.result === "true";
+  const success = searchParams.success === "true";
   return (
     <main id="submit-page">
       <section id="submit-message">
