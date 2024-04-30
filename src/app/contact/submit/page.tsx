@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./submit.scss";
 import Link from "next/link";
