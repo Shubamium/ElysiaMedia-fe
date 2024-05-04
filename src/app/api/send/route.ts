@@ -29,7 +29,11 @@ export async function POST(request: NextRequest) {
         },
       ],
     });
+    console.log(data);
     success = true;
+    if (!data.data) {
+      success = false;
+    }
   } catch (error) {
     return Response.json({ error });
   }
