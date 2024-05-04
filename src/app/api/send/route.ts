@@ -8,19 +8,20 @@ const resend = new Resend(process.env.RESEND_API_KEYS);
 export async function POST(request: NextRequest) {
   let success = false;
   try {
-    const param = request.nextUrl.searchParams;
-    const name = param.get("name");
-    const email = param.get("email");
-    const message = param.get("message");
+    // const param = request.nextUrl.searchParams;
+    // const name = param.get("name");
+    // const email = param.get("email");
+    // const message = param.get("message");
+    const requestData = await request.json();
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: ["officialelysiamedia@gmail.com"],
       subject: "New Email Submission from Elysia Media Website",
       react: Submission({
-        name: name ?? "(Not Filled)",
-        email: email ?? "(Not Filled)",
-        message: message ?? "(Not Provided)",
+        name: requestData.name ?? "(Not Filled)",
+        email: requestData.email ?? "(Not Filled)",
+        message: requestData.message ?? "(Not Provided)",
       }),
       tags: [
         {
@@ -29,7 +30,7 @@ export async function POST(request: NextRequest) {
         },
       ],
     });
-    console.log(data);
+    console.log(data, requestData);
     success = true;
     if (!data.data) {
       success = false;

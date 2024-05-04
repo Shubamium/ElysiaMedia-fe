@@ -34,6 +34,10 @@ export default function ContactPage({}: Props) {
             .then((result) => {
               router.push(`/contact/submit?success=${result.success}`);
               console.log(result);
+            })
+            .catch((err) => {
+              console.log(err);
+              router.push(`/contact/submit?success=false`);
             });
         }}
         method="POST"
