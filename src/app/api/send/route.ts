@@ -15,10 +15,7 @@ export async function POST(request: NextRequest) {
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: [
-        // "businessinquiries@moxiesklubhouse.com",
-        "OfficialElysiaMedia@gmail.com",
-      ],
+      to: ["officialelysiamedia@gmail.com"],
       subject: "New Email Submission from Elysia Media Website",
       react: Submission({
         name: name ?? "(Not Filled)",
